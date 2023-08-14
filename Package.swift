@@ -41,10 +41,10 @@ let package = Package(
 #if os(Linux)
 package.dependencies = []
 package.targets.append(
-    .systemLibrary(name: "CSQLite", pkgConfig: "sqlite3", providers: [.apt(["libsqlite3-dev"])])
+    .systemLibrary(name: "QQSQLite", pkgConfig: "sqlite3", providers: [.apt(["libsqlite3-dev"])])
 )
 package.targets.first?.dependencies.append(
-    "CSQLite"
+    "QQSQLite"
 )
 #endif
 
