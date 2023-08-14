@@ -39,10 +39,12 @@ let package = Package(
 )
 
 #if os(Linux)
-package.dependencies = [
-    .package(url: "https://github.com/stephencelis/CSQLite.git", from: "0.0.3")
-]
-package.targets.first?.dependencies += [
-    .product(name: "CSQLite", package: "CSQLite")
-]
+package.dependencies = []
+package.targets.append(
+    .systemLibrary(name: "FlySQLite", pkgConfig: "sqlite3", providers: [.apt(["libsqlite3-dev"])])
+)
+package.targets.first?.dependencies.append(
+    .target(name: "FlySQLite")
+)
 #endif
+
