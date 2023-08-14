@@ -4,7 +4,7 @@ import sqlite3
 #elseif SQLITE_SWIFT_SQLCIPHER
 import SQLCipher
 #elseif os(Linux)
-import FlySQLite
+import sqlite3
 #else
 import SQLite3
 #endif
