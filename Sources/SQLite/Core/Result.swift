@@ -3,7 +3,7 @@ import sqlite3
 #elseif SQLITE_SWIFT_SQLCIPHER
 import SQLCipher
 #elseif os(Linux)
-// import SQLite3
+import CSQLite
 #else
 import SQLite3
 #endif
