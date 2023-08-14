@@ -44,7 +44,7 @@ package.targets.append(
     .systemLibrary(name: "FlySQLite", pkgConfig: "sqlite3", providers: [.apt(["libsqlite3-dev"])])
 )
 package.targets.first?.dependencies.append(
-    .target(name: "FlySQLite")
+    "FlySQLite"
 )
 #endif
 
